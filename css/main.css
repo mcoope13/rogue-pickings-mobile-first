@@ -9,6 +9,9 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1em;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -17,10 +20,14 @@ html {
 
 .container{
 	max-width: 1200px;
+    width: 100%;
 	margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
+    flex-basis: auto;
+    align-content: flex-start;
 }
 
 h1,
@@ -56,8 +63,12 @@ header {
 	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    align-content: flex-start;
+    clear: both;
 }
 
 header h1 {
@@ -70,7 +81,7 @@ header h1 span {
 }
 
 header nav {
-	float: right;
+	/* float: right; */
 	padding: 46px 0;
 }
 header nav ul {
@@ -97,6 +108,9 @@ header nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    align-content: flex-start;
 }
 
 .main-image {
@@ -176,10 +190,153 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    align-content: flex-start;
 }
+
 footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 14px;
+}
+
+/*Tablet Styles*/
+
+@media all and (min-width: 768px) {
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 95%;
+    }
+    
+    .top-section {
+        padding-left: .5em;
+        padding-right: .5em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        flex-basis: 95%;
+    }
+    
+    .main-title {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .main-title p {
+        margin-top: 0;
+    }
+    
+    .bottom-section {
+        display: flex;
+        flex-basis: 100%;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        padding-left: .5em;
+    }
+    
+    .section-one {
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 33%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .section-two {
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 33%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .section-three {
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 33%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .section-one h4,
+    .section-two h4,
+    .section-three h4 {
+        align-items: center;
+    }
+    
+    
+    
+}
+
+/*Desktop Styles*/
+
+@media all and (min-width: 1200px) {
+    header nav ul {
+    display: flex;
+    justify-content: space-between;
+        
+  }
+    
+    header {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        flex-basis: 90%;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .top-section {
+    
+    }
+    
+    
+    .bottom-section {
+        display: flex;
+        flex-basis: 100%;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        padding-left: .5em;
+    }
+    
+    .section-one {
+        display: flex;
+        flex-flow: column wrap;
+        flex-basis: 33%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .section-two {
+        display: flex;
+        flex-flow: column wrap;
+        flex-basis: 33%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .section-three {
+        display: flex;
+        flex-flow: column;
+        flex-basis: 33%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .section-one h4,
+    .section-two h4,
+    .section-three h4 {
+        align-items: center;
+    }
+    
 }
